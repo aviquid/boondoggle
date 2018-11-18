@@ -21,7 +21,7 @@
   },
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "Productivity shoot!"
+    "default_title": "Boondoggle!"
   },
   "manifest_version": 2
 }
