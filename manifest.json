@@ -1,0 +1,27 @@
+{
+  "name": "Boondoggle",
+  "version": "1.0",
+  "description": "Block all websites that degrade your productivity!",
+  "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*", 
+        "*://*.instagram.com/*",  
+        "*://*.twitter.com/*", 
+        "*://*.hotstar.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Productivity shoot!"
+  },
+  "manifest_version": 2
+}
