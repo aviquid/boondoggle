@@ -2,6 +2,8 @@
   "name": "Boondoggle",
   "version": "1.0",
   "description": "Block all websites that degrade your productivity!",
+  "author": "Avinash Murugesan",
+  "incognito": "spanning",
   "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
   "content_scripts": [
     {
