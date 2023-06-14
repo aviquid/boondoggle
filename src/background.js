@@ -1,7 +1,12 @@
 // Copyright 2018 aviquid. All rights reserved.
 
-'use strict';
-import urls from './urls';
+var urls = [
+    "*://*.facebook.com/*", 
+    "*://*.instagram.com/*",  
+    "*://*.twitter.com/*", 
+    "*://*.hotstar.com/*"
+];
+
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if(sender.frameId) {
     console.log("iframe detected");
