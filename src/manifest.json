@@ -16,19 +16,18 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.youtube.com/*", 
         "*://*.facebook.com/*", 
         "*://*.instagram.com/*",  
         "*://*.twitter.com/*", 
         "*://*.hotstar.com/*"
       ],
       "all_frames": true,
-      "js": ["build/bundle.content.js"],
+      "js": ["./content.js"],
       "run_at": "document_start"
     }
   ],
   "background": {
-    "scripts": ["build/bundle.background.js"],
+    "scripts": ["./background.js"],
     "persistent": true
   },
   "browser_action": {
