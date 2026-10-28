@@ -10,7 +10,9 @@
     "storage", 
     "tabs",
     "webRequestBlocking", 
-    "webRequest",
+    "webRequest"
+  ],
+  "host_permissions": [
     "<all_urls>"
   ],
   "content_scripts": [
@@ -22,17 +24,16 @@
         "*://*.hotstar.com/*"
       ],
       "all_frames": true,
-      "js": ["./content.js"],
+      "js": ["content.js"],
       "run_at": "document_start"
     }
   ],
   "background": {
-    "scripts": ["./background.js"],
-    "persistent": true
+    "service_worker": "background.js"
   },
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html",
     "default_title": "Boondoggle!"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
